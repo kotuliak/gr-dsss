@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(descramble_dsss_bb.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(6c00cd0cbf9a4325bb8d36d85792e059)                     */
+/* BINDTOOL_HEADER_FILE_HASH(d499f01239ac84e8b250f103c927f652)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -30,13 +30,15 @@ namespace py = pybind11;
 void bind_descramble_dsss_bb(py::module& m)
 {
 
-    using descramble_dsss_bb    = gr::dsss::descramble_dsss_bb;
+    using descramble_dsss_bb    = ::gr::dsss::descramble_dsss_bb;
 
 
     py::class_<descramble_dsss_bb, gr::block, gr::basic_block,
         std::shared_ptr<descramble_dsss_bb>>(m, "descramble_dsss_bb", D(descramble_dsss_bb))
 
         .def(py::init(&descramble_dsss_bb::make),
+           py::arg("spread_symbol_length_"),
+           py::arg("spreading_code_length_"),
            D(descramble_dsss_bb,make)
         )
         

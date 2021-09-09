@@ -32,7 +32,7 @@ namespace gr {
        * class. dsss::descramble_dsss_bb::make is the public interface for
        * creating new instances.
        */
-      static sptr make(int spread_symbol_length_, int spreading_code_length_);
+      static sptr make(int spread_symbol_length_, gr_vector_int &spreading_code_);
     };
 
   } // namespace dsss
