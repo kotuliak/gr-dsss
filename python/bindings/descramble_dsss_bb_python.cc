@@ -14,7 +14,7 @@
 /* BINDTOOL_GEN_AUTOMATIC(0)                                                       */
 /* BINDTOOL_USE_PYGCCXML(0)                                                        */
 /* BINDTOOL_HEADER_FILE(descramble_dsss_bb.h)                                        */
-/* BINDTOOL_HEADER_FILE_HASH(d499f01239ac84e8b250f103c927f652)                     */
+/* BINDTOOL_HEADER_FILE_HASH(a593725f648c412b4191c11cec1d5553)                     */
 /***********************************************************************************/
 
 #include <pybind11/complex.h>
@@ -38,7 +38,7 @@ void bind_descramble_dsss_bb(py::module& m)
 
         .def(py::init(&descramble_dsss_bb::make),
            py::arg("spread_symbol_length_"),
-           py::arg("spreading_code_length_"),
+           py::arg("spreading_code_"),
            D(descramble_dsss_bb,make)
         )
         
